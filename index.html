@@ -16,15 +16,15 @@
         <h1>
             My Albums
 
-            <select name="" id="" @change="onSelectChange"></select>
+            <select name="" id="" @change="onSelectChange">Genere</select>
         </h1>
 
         <div class="album-container">
-            <div class="album" v-for="">
+            <div class="album" v-for="(album, index) in albumsList">
 
-                <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                <h3 class="titolo">titolo</h3>
-                <h4 class="artista">arti</h4>
+                <img :src="album.poster" alt="">
+                <h3 class="titolo">{{ album.title }}</h3>
+                <h4 class="artista">{{ album.author}}</h4>
                 <h5 class="anno">2021</h5>
 
             </div>

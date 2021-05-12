@@ -26,11 +26,10 @@ body{
 }
 
 .album{
-    /* width: calc(100% / 3); */
+    /* width: calc(100% / 5); */
     flex-basis: 180px;
-    padding: 14px;
+    padding: 20px;
     text-align: center;
-    border: solid;
     flex-grow: 1;
 }
 
