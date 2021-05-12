@@ -17,14 +17,15 @@
         <h1>
             My Albums
 
-            <select class="form-select" aria-label="Default select example" @change="onSelectChange">
-                <option selected>Seleziona genere</option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="jazz">Jazz</option>
-                <option value="metal">Metal</option>
-              </select>
+            <select class="form-select" aria-label="Default select example" @change="selectGenre()" v-model="selected">
+                <option selected>Tutti i generi</option>
+                <option :value="rock">Rock</option>
+                <option :value="pop">Pop</option>
+                <option :value="jazz">Jazz</option>
+                <option :value="metal">Metal</option>
+            </select>
         </h1>
+        <button @click="orderDate()">Ordina per data di pubblicazione</button>
 
         <div class="album-container">
             <div class="album" v-for="(album, index) in albumsList">

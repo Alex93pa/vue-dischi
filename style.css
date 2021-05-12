@@ -27,16 +27,16 @@ body{
 
 .album{
     /* width: calc(100% / 5); */
-    flex-basis: 180px;
+    flex-basis: 200px;
     padding: 20px;
     text-align: center;
     flex-grow: 1;
 }
 
 .album img{
-    max-height: 150px;
+    height: 200px;
     width: 100%;
-    max-width: 150px;
+    width: 200px;
     object-fit: cover;
     box-shadow: 0 0 7px rgba(0, 0, 0, .8);
 }

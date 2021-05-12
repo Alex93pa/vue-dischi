@@ -15,11 +15,23 @@ new  Vue ({
             })
 
         },
-        onSelectChange(event) {
+        selectGenre(event) {
             const select = event.currentTarget
             select.value
 
             // this.filteredData = 
+        },
+        orderDate: function() {
+            this.items.sort((a, b) => {
+                if (Date.parse(a.year) > Date.parse(b.year)) {
+                   return 1
+                } else if (Date.parse(a.year) < Date.parse(b.year)) {
+                   return -1
+                } else {
+                   return 0
+                }
+              })
+            // return this.item.sort((a, b) => new Date(a.year) - new Date(b.year) );
         }
     },
     mounted() {
