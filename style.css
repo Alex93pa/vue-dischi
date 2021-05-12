@@ -1,0 +1,43 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.album-container{
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.album{
+    /* width: calc(100% / 3); */
+    flex-basis: 180px;
+    padding: 14px;
+    text-align: center;
+    border: solid;
+    flex-grow: 1;
+}
+
+.album img{
+    max-height: 150px;
+    width: 100%;
+    max-width: 150px;
+    object-fit: cover;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .8);
+}
