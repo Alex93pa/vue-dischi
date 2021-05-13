@@ -17,16 +17,16 @@
         <h1>
             My Albums
 
-            <select class="form-select"  v-model="input">
-                <option value="all">Tutti i generi</option>
-                <option :value="genres" v-for="genres in getGenereList">{{ genres }}</option>
+            <select class="form-select" @change="onSelectChange" v-model="genreToFilter">
+                <option value="">Tutti i generi</option>
+                <option :value="genre" v-for="genre in genreList">{{ genre }}</option>
 
             </select>
         </h1>
         <button @click="orderDate()">Ordina per data di pubblicazione</button>
 
         <div class="album-container">
-            <div class="album" v-for="(album, index) in albumsList">
+            <div class="album" v-for="(album, index) in filteredData">
 
                 <img :src="album.poster" alt="">
                 <h3 class="titolo">{{ album.title }}</h3>
