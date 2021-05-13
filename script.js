@@ -48,9 +48,6 @@ new  Vue ({
         .then((resp) => {
             this.albumsList = resp.data.response;
 
-            // this.albumsList.push(...incomingAlbumsList);
-            // this.filteredData.push(...incomingAlbumsList);
-
 
             this.createGenresOptions();
         })
